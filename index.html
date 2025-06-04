@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiderMC Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark">
+  <div id="app">
+    <header>
+      <h1>LiderMC Launcher</h1>
+      <button id="toggleMode">Toggle Theme</button>
+    </header>
+    <main>
+      <section id="loginPanel">
+        <input type="email" id="adminEmail" placeholder="Admin Email" />
+        <input type="password" id="adminPass" placeholder="Password" />
+        <button id="adminLogin">Login as Admin</button>
+      </section>
+
+      <section id="profilePanel" style="display:none;">
+        <input type="text" id="nickname" placeholder="Enter Nickname" />
+        <button id="saveProfile">Save Profile</button>
+        <div id="profileStats"></div>
+        <button id="downloadAPK">Download Minecraft</button>
+        <button id="addServer">Add Server</button>
+        <input type="file" id="skinUploader" accept="image/*" />
+        <img id="skinPreview" />
+        <button id="toggleMusic">Toggle Music</button>
+      </section>
+
+      <section id="newsPanel">
+        <h2>News</h2>
+        <ul id="newsList"></ul>
+      </section>
+    </main>
+  </div>
+  <audio id="buttonSound" src="click.mp3"></audio>
+  <audio id="bgMusic" src="bg.mp3" loop></audio>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
