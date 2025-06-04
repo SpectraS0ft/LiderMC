@@ -1,0 +1,269 @@
+<html class="scroll-smooth" lang="uz">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   LiderMC Launcher
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   html,
+    body {
+      font-family: 'Roboto', sans-serif;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      min-height: 100vh;
+    }
+    .font-minecraft {
+      font-family: 'Press Start 2P', cursive;
+    }
+    /* Glassmorphism blur container */
+    .glass {
+      background: rgba(255 255 255 / 0.1);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border: 1px solid rgba(255 255 255 / 0.2);
+    }
+    /* Dark mode overrides */
+    html.dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    html.dark .glass {
+      background: rgba(0 0 0 / 0.3);
+      border: 1px solid rgba(255 255 255 / 0.1);
+    }
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(100, 100, 100, 0.3);
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    html.dark ::-webkit-scrollbar-thumb {
+      background-color: rgba(200, 200, 200, 0.3);
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-br from-gray-100 to-gray-300 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 transition-colors duration-700">
+  <div class="min-h-screen flex flex-col" id="app">
+   <header class="glass fixed top-0 left-0 right-0 z-50 backdrop-blur-md px-6 py-4 flex items-center justify-between" style="border-radius: 0 0 1rem 1rem">
+    <h1 aria-label="LiderMC Launcher Title" class="font-minecraft text-2xl sm:text-3xl text-indigo-600 dark:text-indigo-400 select-none">
+     LiderMC Launcher
+    </h1>
+    <button aria-label="Toggle dark and light mode" class="text-indigo-600 dark:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded p-2 hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300" id="modeToggle">
+     <i class="fas fa-moon text-xl">
+     </i>
+    </button>
+   </header>
+   <main class="flex-grow pt-24 px-4 sm:px-8 max-w-7xl mx-auto w-full flex flex-col gap-10" role="main">
+    <section aria-labelledby="downloadTitle" class="glass p-6 rounded-xl shadow-lg max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8" id="downloadSection">
+     <img alt="Minecraft Bedrock Edition logo pixel art style with green grass block and pixelated text" class="w-40 h-40 sm:w-48 sm:h-48 rounded-lg shadow-md flex-shrink-0" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/713d3e7d-7225-43f0-7584-7acee5c9ceab.jpg" width="200"/>
+     <div class="flex flex-col gap-4 text-center sm:text-left">
+      <h2 class="font-minecraft text-3xl text-indigo-600 dark:text-indigo-400" id="downloadTitle">
+       Minecraft Bedrock APK ni yuklab oling
+      </h2>
+      <p class="text-gray-700 dark:text-gray-300 max-w-md">
+       Android qurilmalari uchun so'nggi Minecraft Bedrock Edition APK ni oling.
+            Xavfsiz va o'rnatishga tayyor.
+      </p>
+      <a aria-label="Download Minecraft Bedrock APK" class="inline-flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-400" download="" href="https://mcpehub.org/engine/getfile.php?id=43537" rel="noopener noreferrer" target="_blank">
+       <i class="fas fa-download text-lg">
+       </i>
+       APK ni yuklab olish
+      </a>
+     </div>
+    </section>
+    <section aria-labelledby="serverTitle" class="glass p-6 rounded-xl shadow-lg max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8" id="serverSection">
+     <img alt="Minecraft pixel art style server icon with pixelated blocks and network symbol" class="w-40 h-40 sm:w-48 sm:h-48 rounded-lg shadow-md flex-shrink-0" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4e28a134-1622-45bb-96b4-2849800843be.jpg" width="200"/>
+     <div class="flex flex-col gap-4 text-center sm:text-left">
+      <h2 class="font-minecraft text-3xl text-indigo-600 dark:text-indigo-400" id="serverTitle">
+       LiderMC serverini Minecraft ga qo'shing
+      </h2>
+      <p class="text-gray-700 dark:text-gray-300 max-w-md">
+       Minecraft Bedrock Edition ga LiderMC_UZ serverini tezda qo'shing
+            va sarguzashtga qo'shiling.
+      </p>
+      <a aria-label="Add LiderMC server to Minecraft" class="inline-flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-400" href="https://add.aternos.org/LiderMC_UZ" rel="noopener noreferrer" target="_blank">
+       <i class="fas fa-server text-lg">
+       </i>
+       Server qo'shish
+      </a>
+     </div>
+    </section>
+    <section aria-labelledby="newsTitle" class="glass p-6 rounded-xl shadow-lg max-w-5xl mx-auto" id="newsSection">
+     <h2 class="font-minecraft text-3xl text-indigo-600 dark:text-indigo-400 mb-6 text-center" id="newsTitle">
+      So'nggi yangiliklar va yangilanishlar
+     </h2>
+     <div aria-label="List of recent news updates" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+      <article aria-labelledby="news1Title" class="glass p-4 rounded-lg shadow-md flex flex-col hover:scale-[1.03] transition-transform duration-300 cursor-pointer" role="listitem" tabindex="0">
+       <img alt="Screenshot of Minecraft Bedrock update showing new biomes and blocks in pixel art style" class="rounded-md mb-3 object-cover w-full h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/63431e6e-86c8-4bd3-f801-799b2e7999af.jpg" width="400"/>
+       <h3 class="font-semibold text-indigo-700 dark:text-indigo-300 text-lg mb-1" id="news1Title">
+        1.20.10 versiyasi chiqarildi
+       </h3>
+       <time class="text-sm text-gray-600 dark:text-gray-400 mb-2" datetime="2025-06-10">
+        2025-yil 10-iyun
+       </time>
+       <p class="text-gray-700 dark:text-gray-300 flex-grow">
+        Yangi lush caves biomlari qo'shildi, ishlash yaxshilandi va
+              ko'p o'yinchi xatolari tuzatildi.
+       </p>
+      </article>
+      <article aria-labelledby="news2Title" class="glass p-4 rounded-lg shadow-md flex flex-col hover:scale-[1.03] transition-transform duration-300 cursor-pointer" role="listitem" tabindex="0">
+       <img alt="Pixel art style image showing new mobs added in Minecraft Bedrock update" class="rounded-md mb-3 object-cover w-full h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b44a9e22-4eb9-4296-047a-383b6937d415.jpg" width="400"/>
+       <h3 class="font-semibold text-indigo-700 dark:text-indigo-300 text-lg mb-1" id="news2Title">
+        Yangi moblar qo'shildi
+       </h3>
+       <time class="text-sm text-gray-600 dark:text-gray-400 mb-2" datetime="2025-05-25">
+        2025-yil 25-may
+       </time>
+       <p class="text-gray-700 dark:text-gray-300 flex-grow">
+        Glow Squid va Allay moblari taqdim etildi, dunyolaringizga yangi
+              hayot va hayajon olib keladi.
+       </p>
+      </article>
+      <article aria-labelledby="news3Title" class="glass p-4 rounded-lg shadow-md flex flex-col hover:scale-[1.03] transition-transform duration-300 cursor-pointer" role="listitem" tabindex="0">
+       <img alt="Pixel art style image showing new blocks and items in Minecraft Bedrock update" class="rounded-md mb-3 object-cover w-full h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/76eebff6-4c3c-4f6f-538e-f4879d5f4a18.jpg" width="400"/>
+       <h3 class="font-semibold text-indigo-700 dark:text-indigo-300 text-lg mb-1" id="news3Title">
+        Yangi bloklar va buyumlar
+       </h3>
+       <time class="text-sm text-gray-600 dark:text-gray-400 mb-2" datetime="2025-04-15">
+        2025-yil 15-aprel
+       </time>
+       <p class="text-gray-700 dark:text-gray-300 flex-grow">
+        Cherry yog'ochi, bambuk yog'ochi variantlari va yangi dekorativ
+              bloklar qo'shildi.
+       </p>
+      </article>
+      <article aria-labelledby="news4Title" class="glass p-4 rounded-lg shadow-md flex flex-col hover:scale-[1.03] transition-transform duration-300 cursor-pointer" role="listitem" tabindex="0">
+       <img alt="Pixel art style image showing multiplayer improvements in Minecraft Bedrock update" class="rounded-md mb-3 object-cover w-full h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b73d6599-77da-46c9-52e1-4f2ff590b541.jpg" width="400"/>
+       <h3 class="font-semibold text-indigo-700 dark:text-indigo-300 text-lg mb-1" id="news4Title">
+        Ko'p o'yinchi barqarorligi yaxshilandi
+       </h3>
+       <time class="text-sm text-gray-600 dark:text-gray-400 mb-2" datetime="2025-03-30">
+        2025-yil 30-mart
+       </time>
+       <p class="text-gray-700 dark:text-gray-300 flex-grow">
+        Ko'p o'yinchi sessiyalarida uzilishlar va lag muammolari tuzatildi.
+       </p>
+      </article>
+      <article aria-labelledby="news5Title" class="glass p-4 rounded-lg shadow-md flex flex-col hover:scale-[1.03] transition-transform duration-300 cursor-pointer" role="listitem" tabindex="0">
+       <img alt="Pixel art style image showing new enchantments and gameplay features in Minecraft Bedrock update" class="rounded-md mb-3 object-cover w-full h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c8e06132-9de4-43ba-9b5f-34d325468805.jpg" width="400"/>
+       <h3 class="font-semibold text-indigo-700 dark:text-indigo-300 text-lg mb-1" id="news5Title">
+        Yangi sehrlar va o'yin xususiyatlari
+       </h3>
+       <time class="text-sm text-gray-600 dark:text-gray-400 mb-2" datetime="2025-02-20">
+        2025-yil 20-fevral
+       </time>
+       <p class="text-gray-700 dark:text-gray-300 flex-grow">
+        Swift Sneak kabi yangi sehrlar qo'shildi va o'yin mexanikasi yaxshilandi.
+       </p>
+      </article>
+      <article aria-labelledby="news6Title" class="glass p-4 rounded-lg shadow-md flex flex-col hover:scale-[1.03] transition-transform duration-300 cursor-pointer" role="listitem" tabindex="0">
+       <img alt="Pixel art style image showing bug fixes and quality of life improvements in Minecraft Bedrock update" class="rounded-md mb-3 object-cover w-full h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4854e00f-e39e-4101-1daa-621b29813170.jpg" width="400"/>
+       <h3 class="font-semibold text-indigo-700 dark:text-indigo-300 text-lg mb-1" id="news6Title">
+        Xatolar tuzatildi va qulayliklar yaxshilandi
+       </h3>
+       <time class="text-sm text-gray-600 dark:text-gray-400 mb-2" datetime="2025-01-10">
+        2025-yil 10-yanvar
+       </time>
+       <p class="text-gray-700 dark:text-gray-300 flex-grow">
+        Ko'plab xatolar tuzatildi va o'yin qulayligi yaxshilandi.
+       </p>
+      </article>
+     </div>
+    </section>
+   </main>
+   <footer aria-label="Footer" class="glass p-4 text-center text-gray-600 dark:text-gray-400 text-sm select-none">
+    © 2025 LiderMC Launcher. Barcha huquqlar himoyalangan.
+   </footer>
+  </div>
+  <script>
+   (() => {
+      const htmlEl = document.documentElement;
+      const modeToggle = document.getElementById('modeToggle');
+      const moonIconClass = 'fas fa-moon text-xl';
+      const sunIconClass = 'fas fa-sun text-xl';
+
+      // Initialize mode from localStorage or system preference
+      function getInitialMode() {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark') return 'dark';
+        if (stored === 'light') return 'light';
+        // fallback to system preference
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+
+      function updateIcon(isDark) {
+        modeToggle.innerHTML = '';
+        const icon = document.createElement('i');
+        icon.className = isDark ? sunIconClass : moonIconClass;
+        modeToggle.appendChild(icon);
+      }
+
+      function setMode(mode) {
+        if (mode === 'dark') {
+          htmlEl.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          updateIcon(true);
+        } else {
+          htmlEl.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          updateIcon(false);
+        }
+      }
+
+      // Smooth fade transition for mode change
+      function fadeTransition(callback) {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+          callback();
+          document.body.style.opacity = '1';
+        }, 500);
+      }
+
+      // Initialize
+      let currentMode = getInitialMode();
+      setMode(currentMode);
+
+      modeToggle.addEventListener('click', () => {
+        fadeTransition(() => {
+          currentMode = currentMode === 'dark' ? 'light' : 'dark';
+          setMode(currentMode);
+        });
+      });
+
+      // Animate news cards on load with Framer Motion
+      const { motion, AnimatePresence } = window['framer-motion'];
+
+      // We will animate news cards with a staggered fade and slide up effect
+      // Since we cannot directly use React here, we do a simple fade-in with JS
+
+      const newsCards = document.querySelectorAll('#newsSection article');
+      newsCards.forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 150 * i + 300);
+      });
+    })();
+  </script>
+ </body>
+</html>
